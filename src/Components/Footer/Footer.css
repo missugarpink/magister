@@ -1,0 +1,30 @@
+.footer {
+  display: flex;
+  padding: 10px 7%;
+  justify-content: space-between;
+  color: #67595e;
+}
+
+.footer-logo {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.footer ul {
+  flex: 1;
+  list-style: none;
+  text-align: center;
+}
+
+.footer ul li {
+  display: inline-block;
+  margin: 0 20px;
+  color: rgba(103, 89, 94, 0.75);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.footer-rights {
+  color: rgba(103, 89, 94, 0.8);
+  font-size: 12px;
+}

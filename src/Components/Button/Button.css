@@ -1,0 +1,14 @@
+.brown-button {
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+  padding: 10px 30px;
+  margin: 20px 7% 150px 7%;
+  border-radius: 10px;
+  background-color: #67595e;
+  border: none;
+}
+
+.brown-button:hover {
+  background-color: rgba(103, 89, 94, 0.7);
+}
