@@ -6,6 +6,9 @@
     #eed6d3 100%
   );
 }
+.header-wrapper {
+  width: 50%;
+}
 .white-header {
   font-weight: 600;
   font-size: 40px;
@@ -29,7 +32,7 @@
   opacity: 80%;
 }
 .macro-section {
-  padding: 50px 0;
+  padding: 50px 7%;
 }
 
 .tile {
@@ -63,13 +66,13 @@
 
 .tiles-row {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding-top: 50px;
+  flex-wrap: wrap;
 }
 .main-container-contact {
   display: flex;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 100px 7%;
   justify-content: space-between;
   align-items: baseline;
 }

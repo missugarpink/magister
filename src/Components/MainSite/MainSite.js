@@ -19,7 +19,9 @@ function MainSite() {
 function MainSiteMacro() {
   return (
     <div className="macro-section">
-      <Header text="Znajdź najlepsze źródła białka, tłuszczu i węglowodanów" />
+      <div className="header-wrapper">
+        <Header text="Znajdź najlepsze źródła białka, tłuszczu i węglowodanów" />
+      </div>
       <div className="tiles-row">
         <Tile title="Białko" image={protein} />
         <Tile title="Tłuszcz" image={fat} />
@@ -57,7 +59,9 @@ function WhiteButton({ text }) {
 function MainSiteContact() {
   return (
     <div className="main-container-contact">
-      <Header text="Potrzebujesz pomocy? Napisz do nas." />
+      <div className="header-wrapper">
+        <Header text="Potrzebujesz pomocy? Napisz do nas." />
+      </div>
       <Button text="Kontakt" />
     </div>
   );
