@@ -47,7 +47,10 @@
   align-items: center;
   justify-content: center;
 }
-
+.tiles-row a {
+  text-decoration: none; /* Usuwa podkreślenie */
+  color: inherit;
+}
 .tile p {
   font-size: 25px;
   opacity: 90%;

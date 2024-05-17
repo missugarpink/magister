@@ -1,0 +1,48 @@
+.product-container {
+  padding: 10px 7%;
+}
+
+.nutrition-container {
+  display: flex;
+}
+
+.nutrition-header {
+  font-size: 20px;
+  font-weight: 700;
+  color: #67595e;
+}
+
+.nutrition-value {
+  color: #67595e;
+  font-size: 24px;
+  font-weight: 600;
+  padding-top: 50px;
+}
+
+.nutrition-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 80px 30px 0px;
+}
+.nutrition-percentage {
+  font-size: 35px;
+  font-weight: 600;
+  padding-top: 50px;
+}
+
+.protein {
+  color: #e8b4b8;
+}
+
+.fat {
+  color: #eed6d3;
+}
+
+.carbohydrates {
+  color: #a49393;
+}
+
+.nutrition-info {
+  padding-top: 20px;
+}

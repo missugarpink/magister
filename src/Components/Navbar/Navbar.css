@@ -7,6 +7,10 @@
   color: #67595e;
   font-weight: 600;
 }
+.navbar a {
+  text-decoration: none;
+  color: inherit;
+}
 
 .navbar ul {
   flex: 1;

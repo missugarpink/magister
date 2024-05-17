@@ -66,13 +66,41 @@
 .categories-dropdown-list {
   border: 0.5px solid #67595e;
   border-radius: 10px;
+  position: absolute; /* Pozycjonowanie absolutne względem rodzica */
+  top: 100%; /* Pozycjonowanie poniżej przycisku */
+  background-color: white; /* Możesz dostosować kolory */
+  z-index: 1000; /* Upewnij się, że lista jest nad innymi elementami */
 }
 
 .categories-dropdown {
   list-style: none;
   color: #67595e;
 }
+.sort-dropdown-list {
+  border: 0.5px solid #67595e;
+  border-radius: 10px;
+  position: absolute; /* Pozycjonowanie absolutne względem rodzica */
+  top: 90%; /* Pozycjonowanie poniżej przycisku */
+  background-color: white; /* Możesz dostosować kolory */
+  z-index: 1000; /* Upewnij się, że lista jest nad innymi elementami */
+}
 
+.sort-dropdown {
+  list-style: none;
+  color: #67595e;
+}
+
+.sort-dropdown li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  cursor: pointer;
+}
+
+.sort-dropdown .selected {
+  font-weight: 700;
+}
 .category-list-item {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -85,8 +113,43 @@
   padding: 10px 7%;
   display: flex;
   align-items: flex-start;
+  position: relative;
+}
+.sort-container {
+  position: relative;
 }
 
 .category-list-item.selected {
   color: rgba(103, 89, 94, 0.5);
+}
+
+.product-values {
+  display: flex;
+}
+.product-values p {
+  color: #67595e;
+  font-size: 14px;
+  padding-right: 10px;
+}
+
+.product {
+  margin: 40px 7% 0 7%;
+  padding-bottom: 40px;
+  border-bottom: 0.5px solid #67595e;
+}
+
+.product h3 {
+  font-weight: 600;
+  font-size: 18px;
+  color: #67595e;
+  padding-bottom: 5px;
+}
+
+.product a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product h3:hover {
+  color: rgba(103, 89, 94, 0.7);
 }
