@@ -1,0 +1,131 @@
+.calc-container {
+  min-height: 90vh;
+  background-image: linear-gradient(
+    to right,
+    #e8b4b8 0%,
+    #e8b5b8 49%,
+    #eed6d3 100%
+  );
+}
+
+.calc-h1 {
+  color: white;
+  font-size: 35px;
+  text-align: center;
+  font-weight: 600;
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+.form-container {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+}
+
+.form-row p {
+  text-align: left;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 13px 0;
+}
+
+.form-row button {
+  width: 120px;
+  padding: 8px 0;
+  font-size: 20px;
+  color: #67595e;
+  border: 1px solid rgba(103, 89, 94, 0.3);
+  background-color: white;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.form-row .active {
+  background-color: #67595e;
+  color: white;
+}
+
+.form-row input {
+  font-size: 16px;
+  margin: 10px 0;
+  border-radius: 10px;
+  padding: 4px 6px;
+  border: 1px solid rgba(103, 89, 94, 0.3);
+  color: #67595e;
+  margin-right: 5px;
+  width: 250px;
+}
+
+.form-row select {
+  font-size: 16px;
+  margin: 10px 0;
+  border-radius: 10px !important;
+  height: 30px;
+  border: 1px solid rgba(103, 89, 94, 0.3);
+  background-color: white;
+  color: #67595e;
+  width: 250px;
+}
+
+.form-label {
+  min-width: 50%;
+}
+
+.form-label-result {
+  min-width: 40%;
+}
+
+.measures {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.calculate-btn {
+  width: 120px;
+  padding: 8px 0;
+  font-size: 20px;
+  color: white;
+  border: 1px solid rgba(103, 89, 94, 0.3);
+  background-color: #67595e;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  align-self: center;
+}
+.calculate-btn:hover {
+  opacity: 80%;
+}
+.results p {
+  color: white;
+  font-size: 20px;
+  padding: 5px 0;
+}
+
+.results h2 {
+  color: white;
+  font-size: 40px;
+  font-weight: 600;
+}
+.reset-btn {
+  padding: 8px 10px;
+  font-size: 20px;
+  color: white;
+  border: 1px solid rgba(103, 89, 94, 0.3);
+  background-color: #67595e;
+  border-radius: 10px;
+  margin: 10px 0;
+  align-self: center;
+}
+.reset-btn:hover {
+  opacity: 80%;
+}

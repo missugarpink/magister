@@ -51,7 +51,9 @@ function MainSiteCalc() {
   return (
     <div className="main-container">
       <WhiteHeader text="Nie wiesz jakie makro jest dla Ciebie odpowiednie?" />
-      <WhiteButton text="Skorzystaj z kalkulatora" />
+      <Link to="/calculator">
+        <WhiteButton text="Skorzystaj z kalkulatora" />
+      </Link>
     </div>
   );
 }
@@ -67,9 +69,11 @@ function MainSiteContact() {
   return (
     <div className="main-container-contact">
       <div className="header-wrapper">
-        <Header text="Potrzebujesz pomocy? Napisz do nas." />
+        <Header text="Potrzebujesz pomocy? Napisz do mnie." />
       </div>
-      <Button text="Kontakt" />
+      <Link to="/contact">
+        <Button text="Kontakt" />
+      </Link>
     </div>
   );
 }

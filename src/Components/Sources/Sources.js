@@ -112,16 +112,19 @@ function SortOptions({ sortBy, setSortBy }) {
     </div>
   );
 }
+
 function Products({ macro, sortBy, searched }) {
   const [products, setProducts] = useState(productsData);
   const [selectedCategories, setSelectedCategories] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const productsPerPage = 20;
 
   const caloriesPerGram = {
     protein: 4,
     fat: 9,
     carbohydrates: 4,
   };
-  // Funkcja filtrowania produktów według wybranych kategorii
+
   const filterProductsByCategory = (products) => {
     if (selectedCategories.length === 0) {
       return products;
@@ -130,6 +133,7 @@ function Products({ macro, sortBy, searched }) {
       selectedCategories.includes(product.category)
     );
   };
+
   const filterProductsBySearch = (products) => {
     if (!searched) {
       return products;
@@ -139,7 +143,6 @@ function Products({ macro, sortBy, searched }) {
     );
   };
 
-  // Funkcja obliczania procentu energii pochodzącego z makroskładnika
   const calculateEnergyPercentage = (product, macro) => {
     const totalCalories =
       product.protein * caloriesPerGram.protein +
@@ -149,7 +152,6 @@ function Products({ macro, sortBy, searched }) {
     return (macroCalories / totalCalories) * 100;
   };
 
-  // Funkcja sortowania produktów według wybranego kryterium
   const sortProducts = (products, macro, sortBy) => {
     if (sortBy === "grams") {
       return [...products].sort((a, b) => b[macro] - a[macro]);
@@ -162,19 +164,30 @@ function Products({ macro, sortBy, searched }) {
     }
   };
 
-  // Aktualizacja listy produktów na podstawie filtrowania i sortowania
   useEffect(() => {
     let filteredProducts = filterProductsByCategory(productsData);
     filteredProducts = filterProductsBySearch(filteredProducts);
     let sortedProducts = sortProducts(filteredProducts, macro, sortBy);
     setProducts(sortedProducts);
+    setCurrentPage(1); // Reset to first page on filter change
   }, [selectedCategories, macro, sortBy, searched]);
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = products.slice(
+    indexOfFirstProduct,
+    indexOfLastProduct
+  );
+  const totalPages = Math.ceil(products.length / productsPerPage);
 
   return (
     <div>
       <CategoryBtn setSelectedCategories={setSelectedCategories} />
-
-      {products.map((product) => (
+      {currentProducts.map((product) => (
         <div className="product" key={product.name}>
           <Link to={`/product/${product.name}`}>
             <h3>{product.name}</h3>
@@ -187,6 +200,61 @@ function Products({ macro, sortBy, searched }) {
           </div>
         </div>
       ))}
+      <Pagination
+        totalPages={totalPages}
+        currentPage={currentPage}
+        handlePageChange={handlePageChange}
+      />
+    </div>
+  );
+}
+
+function Pagination({ totalPages, currentPage, handlePageChange }) {
+  const pageNumbers = [];
+
+  let startPage = Math.max(1, currentPage - 2);
+  let endPage = Math.min(totalPages, startPage + 3);
+
+  if (endPage - startPage < 3) {
+    startPage = Math.max(1, endPage - 3);
+  }
+
+  for (let i = startPage; i <= endPage; i++) {
+    pageNumbers.push(i);
+  }
+
+  return (
+    <div className="pagination">
+      <button disabled={currentPage === 1} onClick={() => handlePageChange(1)}>
+        &laquo;
+      </button>
+      <button
+        disabled={currentPage === 1}
+        onClick={() => handlePageChange(currentPage - 1)}
+      >
+        &lt;
+      </button>
+      {pageNumbers.map((number) => (
+        <button
+          key={number}
+          className={number === currentPage ? "active" : ""}
+          onClick={() => handlePageChange(number)}
+        >
+          {number}
+        </button>
+      ))}
+      <button
+        disabled={currentPage === totalPages}
+        onClick={() => handlePageChange(currentPage + 1)}
+      >
+        &gt;
+      </button>
+      <button
+        disabled={currentPage === totalPages}
+        onClick={() => handlePageChange(totalPages)}
+      >
+        &raquo;
+      </button>
     </div>
   );
 }

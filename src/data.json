@@ -144,14 +144,6 @@
     "category": "Mięso"
   },
   {
-    "name": "Białko jaja kurzego",
-    "energy": 46,
-    "protein": 10.8,
-    "fat": 0,
-    "carbohydrates": 0.8,
-    "category": "Dodatki i inne"
-  },
-  {
     "name": "Bigos",
     "energy": 126,
     "protein": 5.6,
@@ -990,14 +982,6 @@
     "fat": 15.9,
     "carbohydrates": 28.3,
     "category": "Dania gotowe"
-  },
-  {
-    "name": "Herbata",
-    "energy": 0,
-    "protein": 0.1,
-    "fat": 0,
-    "carbohydrates": 0,
-    "category": "Napoje"
   },
   {
     "name": "Herbatniki",
@@ -3965,14 +3949,6 @@
     "fat": 29.3,
     "carbohydrates": 0,
     "category": "Mięso"
-  },
-  {
-    "name": "Żółtko jaja kurzego",
-    "energy": 355,
-    "protein": 16.3,
-    "fat": 31.9,
-    "carbohydrates": 0.7,
-    "category": "Dodatki i inne"
   },
   {
     "name": "Żurawiny",

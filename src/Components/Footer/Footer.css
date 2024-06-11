@@ -1,6 +1,6 @@
 .footer {
   display: flex;
-  padding: 10px 7%;
+  padding: 10px 10%;
   justify-content: space-between;
   color: #67595e;
 }
@@ -27,4 +27,13 @@
 .footer-rights {
   color: rgba(103, 89, 94, 0.8);
   font-size: 12px;
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #67595e;
 }

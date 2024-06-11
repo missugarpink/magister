@@ -3,9 +3,14 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 15px 7%;
+  padding: 30px 10%;
   color: #67595e;
   font-weight: 600;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
 }
 .navbar a {
   text-decoration: none;

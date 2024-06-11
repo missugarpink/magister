@@ -13,9 +13,6 @@ function Navbar() {
       </Link>
       <ul>
         <li>
-          <SearchMenu />
-        </li>
-        <li>
           <Link to="/protein">Białko</Link>
         </li>
         <li>
@@ -24,12 +21,10 @@ function Navbar() {
         <li>
           <Link to="/carbohydrates">Węglowodany</Link>
         </li>
-        <li>Kalkulator</li>
+        <li>
+          <Link to="/calculator">Kalkulator</Link>
+        </li>
       </ul>
     </div>
   );
-}
-
-function SearchMenu() {
-  return <FontAwesomeIcon icon={faSearch} />;
 }

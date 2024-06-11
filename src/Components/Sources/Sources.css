@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 10px 7%;
+  padding: 0 10%;
 }
 
 .sort-btn {
@@ -17,7 +17,7 @@
 }
 
 .search-div {
-  padding: 10px 7%;
+  padding: 10px 10%;
 }
 
 .search-div input {
@@ -110,7 +110,7 @@
 }
 
 .categories-container {
-  padding: 10px 7%;
+  padding: 10px 10%;
   display: flex;
   align-items: flex-start;
   position: relative;
@@ -133,7 +133,7 @@
 }
 
 .product {
-  margin: 40px 7% 0 7%;
+  margin: 40px 10% 0 10%;
   padding-bottom: 40px;
   border-bottom: 0.5px solid #67595e;
 }
@@ -152,4 +152,26 @@
 
 .product h3:hover {
   color: rgba(103, 89, 94, 0.7);
+}
+
+.pagination {
+  text-align: center;
+  padding: 30px;
+}
+
+.pagination button {
+  padding: 10px;
+  margin: 2px;
+  background-color: white;
+  border: 1px solid #67595e;
+  border-radius: 5px;
+}
+
+.pagination button:disabled {
+  background-color: rgba(103, 89, 94, 0.1);
+  border: 1px solid rgba(103, 89, 94, 0.1);
+}
+.pagination .active {
+  background-color: #67595e;
+  color: white;
 }

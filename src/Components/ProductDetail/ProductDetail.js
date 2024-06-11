@@ -24,6 +24,11 @@ function ProductDetail() {
     return (macroCalories / totalCalories) * 100;
   };
 
+  const macros = ["protein", "fat", "carbohydrates"];
+  const percentages = macros.map((macro) =>
+    calculateEnergyPercentage(product, macro)
+  );
+
   return (
     <div className="product-container">
       <Header text={product.name} />
@@ -53,8 +58,46 @@ function ProductDetail() {
         <div className="nutrition-element">
           <p className="nutrition-header">Energia</p>
           <p className="nutrition-value">{product.energy}kcal</p>
+          <PieChart
+            values={percentages}
+            colors={["#e8b4b8", "#eed6d3", "#a49393"]}
+          />
         </div>
       </div>
     </div>
   );
 }
+
+function PieChart({ values, colors }) {
+  const total = values.reduce((acc, value) => acc + value, 0);
+  const scaledValues = values.map((value) => (value / total) * 360);
+  let cumulativeValue = 0;
+
+  const slices = scaledValues.map((value, index) => {
+    const [startX, startY] = getCoordinatesForAngle(cumulativeValue);
+    cumulativeValue += value;
+    const [endX, endY] = getCoordinatesForAngle(cumulativeValue);
+    const largeArcFlag = value > 180 ? 1 : 0;
+    return (
+      <path
+        key={index}
+        d={`M 0 0 L ${startX} ${startY} A 1 1 0 ${largeArcFlag} 1 ${endX} ${endY} Z`}
+        fill={colors[index]}
+      />
+    );
+  });
+
+  return (
+    <svg
+      viewBox="-1 -1 2 2"
+      style={{ transform: "rotate(-90deg)", marginTop: "20px" }}
+    >
+      {slices}
+    </svg>
+  );
+}
+
+const getCoordinatesForAngle = (angle) => {
+  const radians = (angle * Math.PI) / 180;
+  return [Math.cos(radians), Math.sin(radians)];
+};
