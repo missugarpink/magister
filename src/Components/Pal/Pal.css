@@ -1,0 +1,23 @@
+.pal-container {
+  padding: 10px 10%;
+  width: 80%;
+  color: #67595e;
+  min-height: 90vh;
+}
+
+.pal-container p {
+  padding: 20px 0;
+  font-weight: 500;
+  font-size: 18px;
+}
+.pal-container h2 {
+  padding-top: 20px;
+}
+.pal-container a {
+  color: #67595e;
+  text-decoration: none;
+}
+.pal-container a:hover {
+  color: rgba(103, 89, 94, 0.3);
+  text-decoration: none;
+}

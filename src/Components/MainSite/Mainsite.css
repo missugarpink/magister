@@ -14,7 +14,7 @@
   font-size: 40px;
   color: white;
   width: 60%;
-  padding: 20px 7%;
+  padding: 20px 10%;
   padding-top: 100px;
 }
 .white-button {
@@ -22,7 +22,7 @@
   font-weight: 500;
   color: #67595e;
   padding: 10px 30px;
-  margin: 20px 7% 150px 7%;
+  margin: 20px 7% 150px 10%;
   border-radius: 10px;
   background-color: white;
   border: none;
@@ -32,7 +32,7 @@
   opacity: 80%;
 }
 .macro-section {
-  padding: 50px 7%;
+  padding: 30px 10%;
 }
 
 .tile {
@@ -46,8 +46,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
 }
-
+.tiles-row a {
+  text-decoration: none; /* Usuwa podkreślenie */
+  color: inherit;
+}
 .tile p {
   font-size: 25px;
   opacity: 90%;
@@ -72,7 +76,7 @@
 }
 .main-container-contact {
   display: flex;
-  padding: 100px 7%;
+  padding: 100px 10%;
   justify-content: space-between;
   align-items: baseline;
 }

@@ -2,25 +2,29 @@ import React from "react";
 import "./Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 export default Navbar;
 function Navbar() {
   return (
     <div className="navbar">
-      <div className="logo">Macrosources</div>
+      <Link to="/">
+        <div className="logo">Macrosources</div>
+      </Link>
       <ul>
         <li>
-          <SearchMenu />
+          <Link to="/protein">Białko</Link>
         </li>
-        <li>Białko</li>
-        <li>Tłuszcz</li>
-        <li>Węglowodany</li>
-        <li>Kalkulator</li>
+        <li>
+          <Link to="/fat">Tłuszcz</Link>
+        </li>
+        <li>
+          <Link to="/carbohydrates">Węglowodany</Link>
+        </li>
+        <li>
+          <Link to="/calculator">Kalkulator</Link>
+        </li>
       </ul>
     </div>
   );
-}
-
-function SearchMenu() {
-  return <FontAwesomeIcon icon={faSearch} />;
 }

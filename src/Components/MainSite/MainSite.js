@@ -5,6 +5,7 @@ import Button from "../Button/Button";
 import protein from "./icons/protein.png";
 import fat from "./icons/fat.png";
 import carbohydrates from "./icons/carbohydrates.png";
+import { Link } from "react-router-dom";
 
 export default MainSite;
 function MainSite() {
@@ -23,9 +24,15 @@ function MainSiteMacro() {
         <Header text="Znajdź najlepsze źródła białka, tłuszczu i węglowodanów" />
       </div>
       <div className="tiles-row">
-        <Tile title="Białko" image={protein} />
-        <Tile title="Tłuszcz" image={fat} />
-        <Tile title="Węglowodany" image={carbohydrates} />
+        <Link to="/protein">
+          <Tile title="Białko" image={protein} />
+        </Link>
+        <Link to="/fat">
+          <Tile title="Tłuszcz" image={fat} />
+        </Link>
+        <Link to="/carbohydrates">
+          <Tile title="Węglowodany" image={carbohydrates} />
+        </Link>
       </div>
     </div>
   );
@@ -44,7 +51,9 @@ function MainSiteCalc() {
   return (
     <div className="main-container">
       <WhiteHeader text="Nie wiesz jakie makro jest dla Ciebie odpowiednie?" />
-      <WhiteButton text="Skorzystaj z kalkulatora" />
+      <Link to="/calculator">
+        <WhiteButton text="Skorzystaj z kalkulatora" />
+      </Link>
     </div>
   );
 }
@@ -60,9 +69,11 @@ function MainSiteContact() {
   return (
     <div className="main-container-contact">
       <div className="header-wrapper">
-        <Header text="Potrzebujesz pomocy? Napisz do nas." />
+        <Header text="Potrzebujesz pomocy? Napisz do mnie." />
       </div>
-      <Button text="Kontakt" />
+      <Link to="/contact">
+        <Button text="Kontakt" />
+      </Link>
     </div>
   );
 }

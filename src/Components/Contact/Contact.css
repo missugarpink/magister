@@ -1,0 +1,36 @@
+.contact-container {
+  min-height: 90vh;
+  background-image: linear-gradient(
+    to right,
+    #e8b4b8 0%,
+    #e8b5b8 49%,
+    #eed6d3 100%
+  );
+  padding: 0px 10%;
+  color: white;
+}
+
+.contact-h1 {
+  color: white;
+  font-size: 45px;
+  font-weight: 600;
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+.contact-container h2 {
+  font-size: 35px;
+}
+.contact-container p {
+  font-size: 20px;
+  padding: 15px 0;
+}
+
+.contact-container a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-container a:hover {
+  opacity: 80%;
+}
