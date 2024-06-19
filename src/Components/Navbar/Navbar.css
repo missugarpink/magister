@@ -12,6 +12,7 @@
   z-index: 1000;
   background-color: white;
 }
+
 .navbar a {
   text-decoration: none;
   color: inherit;
@@ -21,6 +22,11 @@
   flex: 1;
   list-style: none;
   text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar ul li {
@@ -30,6 +36,7 @@
   font-size: 15px;
   cursor: pointer;
 }
+
 ul li:hover {
   color: rgba(103, 89, 94, 1);
 }
@@ -38,6 +45,48 @@ ul li:hover {
   font-size: 25px;
   cursor: pointer;
 }
+
 .logo:hover {
   color: rgba(103, 89, 94, 0.75);
+}
+
+/* Styl dla hamburgera */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #67595e;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px; /* Dostosuj według wysokości navbar */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .navbar ul.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+  }
 }
