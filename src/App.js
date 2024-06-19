@@ -7,7 +7,7 @@ import Calculator from "./Components/Calculator/Calculator";
 import Pal from "./Components/Pal/Pal";
 import Contact from "./Components/Contact/Contact";
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <Router>
@@ -32,5 +32,4 @@ function App() {
     </Router>
   );
 }
-
 export default App;

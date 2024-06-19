@@ -1,30 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
-export default Navbar;
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div className="navbar">
-      <Link to="/">
-        <div className="logo">Macrosources</div>
+      <Link to="/" className="logo">
+        Macrosources
       </Link>
-      <ul>
+      <div className={`hamburger ${isOpen ? "open" : ""}`} onClick={toggleMenu}>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+      </div>
+      <ul className={`nav-links ${isOpen ? "open" : ""}`}>
         <li>
-          <Link to="/protein">Białko</Link>
+          <Link to="/protein" onClick={toggleMenu}>
+            Białko
+          </Link>
         </li>
         <li>
-          <Link to="/fat">Tłuszcz</Link>
+          <Link to="/fat" onClick={toggleMenu}>
+            Tłuszcz
+          </Link>
         </li>
         <li>
-          <Link to="/carbohydrates">Węglowodany</Link>
+          <Link to="/carbohydrates" onClick={toggleMenu}>
+            Węglowodany
+          </Link>
         </li>
         <li>
-          <Link to="/calculator">Kalkulator</Link>
+          <Link to="/calculator" onClick={toggleMenu}>
+            Kalkulator
+          </Link>
         </li>
       </ul>
     </div>
   );
 }
+
+export default Navbar;
