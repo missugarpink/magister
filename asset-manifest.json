@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/magister/static/css/main.cf14a7e3.css",
-    "main.js": "/magister/static/js/main.06bf9116.js",
+    "main.css": "/magister/static/css/main.3ebaf697.css",
+    "main.js": "/magister/static/js/main.f1396bd0.js",
     "static/media/carbohydrates.png": "/magister/static/media/carbohydrates.2d78c84291532c0bde95.png",
     "static/media/fat.png": "/magister/static/media/fat.3ab759d12da5a955e080.png",
     "static/media/protein.png": "/magister/static/media/protein.b5dc045ebc8b08736a4c.png",
     "index.html": "/magister/index.html",
-    "main.cf14a7e3.css.map": "/magister/static/css/main.cf14a7e3.css.map",
-    "main.06bf9116.js.map": "/magister/static/js/main.06bf9116.js.map"
+    "main.3ebaf697.css.map": "/magister/static/css/main.3ebaf697.css.map",
+    "main.f1396bd0.js.map": "/magister/static/js/main.f1396bd0.js.map"
   },
   "entrypoints": [
-    "static/css/main.cf14a7e3.css",
-    "static/js/main.06bf9116.js"
+    "static/css/main.3ebaf697.css",
+    "static/js/main.f1396bd0.js"
   ]
 }
