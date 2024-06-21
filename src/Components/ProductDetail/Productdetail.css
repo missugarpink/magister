@@ -49,3 +49,17 @@
 .nutrition-info {
   padding: 30px 0;
 }
+@media (max-width: 768px) {
+  .nutrition-container {
+    flex-direction: column;
+  }
+  h1 {
+    text-align: center;
+  }
+  .nutrition-info {
+    text-align: center;
+  }
+  .nutrition-element {
+    padding-right: 0;
+  }
+}

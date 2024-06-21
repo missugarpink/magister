@@ -21,3 +21,8 @@
   color: rgba(103, 89, 94, 0.3);
   text-decoration: none;
 }
+@media (max-width: 768px) {
+  .pal-container {
+    width: 100%;
+  }
+}

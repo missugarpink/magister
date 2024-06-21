@@ -52,6 +52,11 @@
   padding-left: 10px;
   border: none;
   margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.selected-category button {
+  color: #67595e;
 }
 
 .close-button {
@@ -114,6 +119,7 @@
   display: flex;
   align-items: flex-start;
   position: relative;
+  flex-wrap: wrap;
 }
 .sort-container {
   position: relative;
@@ -165,6 +171,7 @@
   background-color: white;
   border: 1px solid #67595e;
   border-radius: 5px;
+  color: #67595e;
 }
 
 .pagination button:disabled {
@@ -174,4 +181,14 @@
 .pagination .active {
   background-color: #67595e;
   color: white;
+}
+
+@media (max-width: 768px) {
+  .sources-header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .sort-btn {
+    margin-left: 0;
+  }
 }

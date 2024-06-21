@@ -99,7 +99,7 @@
   border: 1px solid rgba(103, 89, 94, 0.3);
   background-color: #67595e;
   border-radius: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 50px;
   align-self: center;
 }
 .calculate-btn:hover {
@@ -128,4 +128,13 @@
 }
 .reset-btn:hover {
   opacity: 80%;
+}
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+    padding-bottom: 30px;
+  }
+  .form-row p {
+    text-align: center;
+  }
 }
