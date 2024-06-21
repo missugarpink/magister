@@ -7,6 +7,10 @@
   );
 }
 
+.main-site-container {
+  min-height: 100vh;
+}
+
 .white-header {
   font-weight: 600;
   font-size: 40px;

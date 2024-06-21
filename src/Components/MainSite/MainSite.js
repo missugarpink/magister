@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 export default MainSite;
 function MainSite() {
   return (
-    <div>
+    <div className="main-site-container">
       <MainSiteMacro />
       <MainSiteCalc />
       <MainSiteContact />

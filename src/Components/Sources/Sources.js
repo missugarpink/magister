@@ -22,7 +22,7 @@ function Sources({ macro }) {
     setSortBy(e.target.value);
   };
   return (
-    <div>
+    <div class="main-site-container">
       <Search onSearch={handleSearch} />
       <div className="sources-header-container">
         <Header text={headerText} />
