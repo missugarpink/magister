@@ -53,9 +53,10 @@
   .nutrition-container {
     flex-direction: column;
   }
-  h1 {
+  .product-container h1 {
     text-align: center;
   }
+
   .nutrition-info {
     text-align: center;
   }
