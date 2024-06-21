@@ -55,6 +55,9 @@ function Search({ onSearch }) {
           placeholder="Wyszukaj produkt"
           aria-label="Wyszukiwarka" // dodatkowy atrybut dla dostępności
         />
+        <button class="mobile-btn" type="submit">
+          Szukaj
+        </button>
       </form>
     </div>
   );
