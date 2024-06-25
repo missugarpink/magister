@@ -71,10 +71,10 @@
 .categories-dropdown-list {
   border: 0.5px solid #67595e;
   border-radius: 10px;
-  position: absolute; /* Pozycjonowanie absolutne względem rodzica */
-  top: 100%; /* Pozycjonowanie poniżej przycisku */
-  background-color: white; /* Możesz dostosować kolory */
-  z-index: 1000; /* Upewnij się, że lista jest nad innymi elementami */
+  position: absolute;
+  top: 100%;
+  background-color: white;
+  z-index: 1000;
 }
 
 .categories-dropdown {
@@ -84,10 +84,10 @@
 .sort-dropdown-list {
   border: 0.5px solid #67595e;
   border-radius: 10px;
-  position: absolute; /* Pozycjonowanie absolutne względem rodzica */
-  top: 90%; /* Pozycjonowanie poniżej przycisku */
-  background-color: white; /* Możesz dostosować kolory */
-  z-index: 1000; /* Upewnij się, że lista jest nad innymi elementami */
+  position: absolute;
+  top: 90%;
+  background-color: white;
+  z-index: 1000;
 }
 
 .sort-dropdown {
